@@ -17,7 +17,7 @@
          <div v-for="item in state.list" >
            <el-card :body-style="{ padding: '0px' }" class="item">
              <img
-                 :src="getServerUrl() +item.carImg"
+                 :src="'https://hard-dog.oss-cn-shenzhen.aliyuncs.com/' +item.carImg"
                  class="image"
                  style="height: 300px"
              />

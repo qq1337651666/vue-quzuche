@@ -2,7 +2,9 @@
 import axios from 'axios';
 import store from '@/store'
 
+// let baseUrl="http://47.113.145.4:80/";
 let baseUrl="http://localhost:80/";
+// let imageUrl="https://hard-dog.oss-cn-shenzhen.aliyuncs.com/"
 // 创建axios实例
 const httpService = axios.create({
     // url前缀-'http:xxx.xxx'

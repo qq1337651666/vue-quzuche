@@ -93,7 +93,8 @@
     password: "",
     rememberMe: false,
     code: "",
-    uuid: ""
+    uuid: "",
+    device:"PC"
   });
   const dialogVisible=ref(false)
 
@@ -128,6 +129,7 @@
         }
 
         try{
+          loginForm.value['device'] = "PC"
           let result=await requestUtil.post("login?"+qs.stringify(loginForm.value));
           let data=result.data;
           if(data.code==200){

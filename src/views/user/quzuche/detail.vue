@@ -1,6 +1,6 @@
 <template>
   <div style="width: 70%;margin-left: 10px;margin-top: 10px;display: flex;">
-    <el-image style="width: 300px; height: 400px;margin-right:20px" :src="getServerUrl() + state.car.carImg" :fit="fit" />
+    <el-image style="width: 300px; height: 400px;margin-right:20px" :src="'https://hard-dog.oss-cn-shenzhen.aliyuncs.com/'+ state.car.carImg" :fit="fit" />
     <div>
       <div style="display: flex;width:300px;margin-bottom: 20px; font-size: 20px; justify-content: space-between"><span>车型号:</span><span>{{state.car.description}}</span></div>
       <div style="display: flex;width:300px;margin-bottom: 20px;font-size: 20px; justify-content: space-between"><span>原价:</span><span>{{state.car.carPrice}}</span></div>

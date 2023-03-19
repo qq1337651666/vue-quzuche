@@ -18,7 +18,7 @@
       <el-table-column type="selection" width="55"/>
       <el-table-column prop="carImg" label="汽车图" width="80" align="center">
         <template v-slot="scope">
-          <img :src="getServerUrl()+ scope.row.carImg" width="50" height="50"/>
+          <img :src="'https://hard-dog.oss-cn-shenzhen.aliyuncs.com/'+ scope.row.carImg" width="50" height="50"/>
         </template>
       </el-table-column>
       <el-table-column prop="carNumber" label="车牌号" width="100" align="center"/>

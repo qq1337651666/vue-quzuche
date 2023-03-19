@@ -16,11 +16,12 @@
       <el-upload
           :headers="headers"
           class="avatar-uploader"
-          :action="getServerUrl()+'car/uploadImage'"
+          :action="getServerUrl()+'car/uploadImageToOSS'"
           :show-file-list="false"
           :on-success="handleAvatarSuccess"
+          v-model="form.carImg"
       >
-        <img v-if=" form.carImg" :src="getServerUrl() +form.carImg" class="avatar" />
+        <img v-if=" form.carImg" :src="'https://hard-dog.oss-cn-shenzhen.aliyuncs.com/' +form.carImg + 't=' + new Date().getTime()" class="avatar" />
         <el-icon v-else class="avatar-uploader-icon"><Plus /></el-icon>
       </el-upload>
     </el-form-item>
@@ -116,6 +117,7 @@ const form=ref({
 })
 const handleAvatarSuccess=(res)=>{
   form.value.carImg=res.data.src;
+  console.log(res.data.src)
 }
 
 
