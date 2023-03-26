@@ -143,6 +143,10 @@ const options = [
     value: '3',
     label: '审核状态',
   },
+  {
+    value: '4',
+    label: '用户已取消',
+  },
 ]
 
 const handleSelectionChange = (selection) => {
